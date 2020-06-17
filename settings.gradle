@@ -1,0 +1,2 @@
+rootProject.name='StreamCamera'
+include ':app'

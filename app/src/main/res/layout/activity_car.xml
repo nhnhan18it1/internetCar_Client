@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main_view"
+    android:layout_height="match_parent"
+    tools:context=".CarActivity">
+
+    <SeekBar
+        android:id="@+id/seek_bar_x"
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:maxHeight="10dp"
+        android:minHeight="10dp"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:thumb="@drawable/custom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_y"
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:maxHeight="10dp"
+        android:minHeight="10dp"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:rotation="270"
+        android:thumb="@drawable/custom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/camera_render_car"
+        android:layout_width="320dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/seek_bar_x"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/seek_bar_y"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_car_createR"
+        android:layout_width="79dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:text="Create"
+        app:layout_constraintStart_toEndOf="@+id/seek_bar_y"
+        app:layout_constraintTop_toBottomOf="@+id/camera_render_car" />
+
+    <Button
+        android:id="@+id/btn_trytoS"
+        android:layout_width="81dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="Try to s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_car_createR"
+        app:layout_constraintTop_toBottomOf="@+id/camera_render_car"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <Button
+        android:id="@+id/btn_offer"
+        android:layout_width="84dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="7dp"
+        android:text="offer"
+        app:layout_constraintEnd_toStartOf="@+id/seek_bar_x"
+        app:layout_constraintStart_toEndOf="@+id/btn_trytoS"
+        app:layout_constraintTop_toBottomOf="@+id/camera_render_car" />
+
+    <Button
+        android:id="@+id/btn_setStart"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="116dp"
+        android:text="start"
+        app:layout_constraintEnd_toStartOf="@+id/seek_bar_x"
+        app:layout_constraintStart_toEndOf="@+id/seek_bar_y"
+        app:layout_constraintTop_toBottomOf="@+id/btn_trytoS" />
+
+    <TextView
+        android:id="@+id/txtTem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#0CEA15"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/camera_render_car"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#0CEA15"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/camera_render_car"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
